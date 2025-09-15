@@ -1,10 +1,10 @@
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 struct Node{
     int data;
     Node* left;
     Node* right;
-  //  int height;
     Node(int val){
         data=val;
         left= right= nullptr;
@@ -13,11 +13,12 @@ struct Node{
  Node* insert(Node* root,int val){
     if(root==nullptr){
         return new Node(val);
-    else if(val<root->data){
-       root->left = insert(root->left,vaL);
     }
-    else if(val>root->data){
-        root->right = insert(root->right,vaL);
+    else if(val<root->data){
+       root->left = insert(root->left,val);
+    }
+    else if  (val>root->data){
+        root->right = insert(root->right,val);
     }
     return root;
 }
